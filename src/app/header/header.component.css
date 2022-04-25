@@ -1,0 +1,32 @@
+header {
+  background-color: var(--red-light);
+  padding: 0;
+  border-bottom: 1px solid var(--red);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 4rem;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list-item > a {
+  color: var(--red);
+}
+
+.nav-list-item > a:hover {
+  font-weight: bolder;
+}
