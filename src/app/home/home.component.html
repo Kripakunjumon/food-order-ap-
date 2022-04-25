@@ -1,5 +1,7 @@
-<ul>
-  <li *ngFor="let food of foods">
-    <img src="{{ food }}" alt="Food Cuisine" />
+<ul class="fi-list">
+  <li class="fi-list-item" *ngFor="let food of foods">
+    <a class="fi-link">
+      <img class="fi" src="{{ food }}" alt="Food Cuisine" />
+    </a>
   </li>
 </ul>
