@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "~css-star-rating/css/star-rating.css";
 
 :root {
   --red: #eb144c;
   --red-light: #eb144c1a;
   --white: #ffffff;
+  --gray: #424242;
 }
 
 * {
@@ -20,4 +22,41 @@ body {
 
 a {
   text-decoration: none;
+}
+
+/* Override Colors by using style rules */
+.rating .star-container {
+  margin-left: 0 !important;
+}
+
+.rating.color-negative .star-container .star svg {
+  fill: var(--red) !important;
+}
+
+.rating.color-negative .star-container .star i {
+  color: var(--red) !important;
+}
+
+.rating.color-ok .star-container .star svg {
+  fill: var(--red) !important;
+}
+
+.rating.color-ok .star-container .star i {
+  color: var(--red) !important;
+}
+
+.rating.color-positive .star-container .star svg {
+  fill: var(--red) !important;
+}
+
+.rating.color-positive .star-container .star i {
+  color: var(--red) !important;
+}
+
+.rating.color-default .star-container .star svg {
+  fill: var(--red) !important;
+}
+
+.rating.color-default .star-container .star i {
+  color: var(--red) !important;
 }
