@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Food } from 'src/app/shared/models/food';
+import { Tag } from 'src/app/shared/models/tag';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class FoodService {
         origins: ['pakistani'],
         stars: 4.9,
         imageUrl: '/assets/food-1.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['fastfood', 'pizza', 'lunch'],
       },
       {
         id: 2,
@@ -29,7 +30,7 @@ export class FoodService {
         origins: ['italian'],
         stars: 4.1,
         imageUrl: '/assets/food-2.jpg',
-        tags: ['FastFood', 'Burger', 'Lunch', 'Dinner'],
+        tags: ['fastfood', 'burger', 'lunch', 'dinner'],
       },
       {
         id: 3,
@@ -40,7 +41,7 @@ export class FoodService {
         origins: ['german'],
         stars: 4.0,
         imageUrl: '/assets/food-3.jpg',
-        tags: ['FastFood', 'Fries', 'Lunch'],
+        tags: ['fastfood', 'fries', 'lunch'],
       },
       {
         id: 4,
@@ -51,7 +52,7 @@ export class FoodService {
         origins: ['persian', 'middle east'],
         stars: 4.7,
         imageUrl: '/assets/food-4.jpg',
-        tags: ['FastFood', 'Burger', 'Lunch'],
+        tags: ['fastfood', 'burger', 'lunch'],
       },
       {
         id: 5,
@@ -62,7 +63,7 @@ export class FoodService {
         origins: ['german', 'italian'],
         stars: 4.0,
         imageUrl: '/assets/food-5.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['fastfood', 'pizza', 'lunch'],
       },
       {
         id: 6,
@@ -73,7 +74,7 @@ export class FoodService {
         origins: ['pakistani', 'italian'],
         stars: 4.0,
         imageUrl: '/assets/food-6.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['fastfood', 'pizza', 'lunch'],
       },
       {
         id: 7,
@@ -84,7 +85,7 @@ export class FoodService {
         origins: ['china', 'german'],
         stars: 3.0,
         imageUrl: '/assets/food-7.jpg',
-        tags: ['FastFood', 'Noodles', 'Lunch', 'Dinner'],
+        tags: ['fastfood', 'noodles', 'lunch', 'dinner'],
       },
       {
         id: 8,
@@ -95,8 +96,31 @@ export class FoodService {
         origins: ['pakistani'],
         stars: 4.0,
         imageUrl: '/assets/food-8.jpg',
-        tags: ['FastFood', 'club sandwich', 'Lunch'],
+        tags: ['fastfood', 'sandwich', 'lunch'],
       },
     ];
+  }
+
+  getAllTag(): Tag[] {
+    return [
+      { name: 'All', value: 'all', count: this.getAll().length },
+      { name: 'Fast Food', value: 'fastfood', count: 8 },
+      { name: 'Lunch', value: 'lunch', count: 8 },
+      { name: 'Dinner', value: 'dinner', count: 2 },
+      { name: 'Sandwich', value: 'sandwich', count: 1 },
+      { name: 'Noodles', value: 'noodles', count: 1 },
+      { name: 'Burger', value: 'burger', count: 2 },
+      { name: 'Fries', value: 'fries', count: 1 },
+    ];
+  }
+
+  getAllFoodByTag(tag: string): Food[] {
+    if (tag === 'all') {
+      return this.getAll();
+    } else {
+      return this.getAll().filter((food) =>
+        food.tags?.includes(tag.toLowerCase())
+      );
+    }
   }
 }
