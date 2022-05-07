@@ -11,10 +11,8 @@ import { Tag } from '../shared/models/Tag';
 export class TagsComponent implements OnInit {
   tags: Tag[] = [];
   searchItem: string = 'all';
-  @Input()
-  foodPageTags: string[] = [];
-  @Input()
-  justifyContent: string = 'center';
+  @Input() foodPageTags: string[] = [];
+  @Input() justifyContent: string = 'center';
 
   constructor(
     private foodService: FoodService,
@@ -22,7 +20,7 @@ export class TagsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (!this.foodPageTags) {
+    if (!this.foodPageTags.length) {
       this.tags = this.foodService.getAllTag();
     }
 
