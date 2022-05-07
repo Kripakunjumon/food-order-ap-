@@ -9,9 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { TagsComponent } from './tags/tags.component';
+import { CartComponent } from './cart/cart.component';
+import { FoodComponent } from './food/food.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent, CartComponent, FoodComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
-import { Tag } from '../shared/models/tag';
+import { Tag } from '../shared/models/Tag';
 
 @Component({
   selector: 'app-tags',
@@ -11,13 +11,20 @@ import { Tag } from '../shared/models/tag';
 export class TagsComponent implements OnInit {
   tags: Tag[] = [];
   searchItem: string = 'all';
+  @Input()
+  foodPageTags: string[] = [];
+  @Input()
+  justifyContent: string = 'center';
+
   constructor(
     private foodService: FoodService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.tags = this.foodService.getAllTag();
+    if (!this.foodPageTags) {
+      this.tags = this.foodService.getAllTag();
+    }
 
     this.route.params.subscribe((params) => {
       if (params['tag']) {

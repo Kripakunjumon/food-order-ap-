@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
-import { Food } from '../shared/models/food';
+import { Food } from '../shared/models/Food';
 
 @Component({
   selector: 'app-home',
