@@ -22,12 +22,12 @@ export class CartComponent implements OnInit {
   }
 
   removeFromCart(cartItem: CartItem) {
-    this.cartService.removeFromCart(cartItem.food.id);
+    // this.cartService.removeFromCart(cartItem.food.id);
     this.setCart();
   }
 
   changeQuantity(cartItem: CartItem, quantity: string) {
-    this.cartService.changeQuantity(cartItem.food.id, +quantity);
+    // this.cartService.changeQuantity(cartItem.food.id, +quantity);
     this.setCart();
   }
 }
