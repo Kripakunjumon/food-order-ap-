@@ -1,14 +1,14 @@
-// import { Food } from './Food';
+import { Food } from './Food';
 
 export class CartItem {
-  // food: Food;
+  food: Food;
   quantity: number = 1;
 
-  // constructor(food: Food) {
-  //   this.food = food;
-  // }
+  constructor(food: Food) {
+    this.food = food;
+  }
 
-  // get price(): number {
-  //   return this.food.price * this.quantity;
-  // }
+  get price(): number {
+    return this.food.price * this.quantity;
+  }
 }
