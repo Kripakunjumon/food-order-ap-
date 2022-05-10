@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
-// import { Food } from '../shared/models/Food';
+import { Food } from '../shared/models/Food';
  
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { FoodService } from '../services/food/food.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  // foods: Food[] = [];
+  foods: Food[] = [];
   constructor(
     private foodService: FoodService,
     private route: ActivatedRoute
@@ -17,17 +17,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      // if (params['searchItem']) {
-      //   this.foods = this.foodService
-      //     .getAll()
-      //     .filter((food) =>
-      //       food.name.toLowerCase().includes(params['searchItem'].toLowerCase())
-      //     );
-      // } else if (params['tag']) {
-      //   this.foods = this.foodService.getAllFoodByTag(params['tag']);
-      // } else {
-      //   this.foods = this.foodService.getAll();
-      // }
+      if (params['searchItem']) {
+        this.foods = this.foodService
+          .getAll()
+          .filter((food) =>
+            food.name.toLowerCase().includes(params['searchItem'].toLowerCase())
+          );
+      } else if (params['tag']) {
+        this.foods = this.foodService.getAllFoodByTag(params['tag']);
+      } else {
+        this.foods = this.foodService.getAll();
+      }
     });
   }
 }
