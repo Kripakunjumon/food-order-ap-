@@ -1,4 +1,4 @@
-import { Food } from "./Food";
+import { Food } from "src/app/shared/models/Food";
 
 export class CartItem {
   food: Food;

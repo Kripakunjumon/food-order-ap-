@@ -1,4 +1,4 @@
-import { CartItem } from "./CartItem";
+import { CartItem } from "src/app/shared/models/CartItem";
 
 export class Cart {
   items: CartItem[] = [];

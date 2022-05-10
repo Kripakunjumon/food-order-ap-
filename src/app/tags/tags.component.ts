@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
-import { Tag } from '../shared/models/Tag';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-tags',
