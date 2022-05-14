@@ -1,6 +1,6 @@
-import { CartItem } from './CartItem';
+import CartItem from './CartItem';
 
-export class Cart {
+class Cart {
   items: CartItem[] = [];
 
   get totalPrice(): number {
@@ -11,3 +11,5 @@ export class Cart {
     return totalPrice;
   }
 }
+
+export default Cart;

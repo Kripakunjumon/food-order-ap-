@@ -1,4 +1,4 @@
-export class Food {
+class Food {
   id!: number;
   price!: number;
   name!: string;
@@ -9,3 +9,5 @@ export class Food {
   cookTime!: string;
   origins!: string[];
 }
+
+export default Food;

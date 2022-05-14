@@ -1,6 +1,6 @@
-import { Food } from './Food';
+import Food from './Food';
 
-export class CartItem {
+class CartItem {
   food: Food;
   quantity: number = 1;
 
@@ -12,3 +12,5 @@ export class CartItem {
     return this.food.price * this.quantity;
   }
 }
+
+export default CartItem;
