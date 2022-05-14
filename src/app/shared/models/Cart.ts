@@ -1,4 +1,4 @@
-import CartItem from './CartItem';
+import CartItem from './cartItem';
 
 class Cart {
   items: CartItem[] = [];
