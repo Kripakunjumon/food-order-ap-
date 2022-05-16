@@ -18,9 +18,8 @@ jobs:
         with:
           node-version: 14
 
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install
+      - uses: Install Node Modules
+        run: npm install
 
       - name: Build Angular App
         run: sudo npm run build
