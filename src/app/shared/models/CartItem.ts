@@ -1,7 +1,7 @@
 import Food from './food';
 
 class CartItem {
-  food: Food;
+  food!: Food;
   quantity: number = 1;
 
   constructor(food: Food) {
