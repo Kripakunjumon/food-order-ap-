@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 14
 
-      - uses: Install Node Modules
+      - name: Install Node Modules
         run: npm install
 
       - name: Build Angular App
