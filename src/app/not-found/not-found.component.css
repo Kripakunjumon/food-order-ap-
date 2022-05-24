@@ -8,6 +8,7 @@ div {
 }
 
 div a {
+  
   font-size: 1rem;
   background-color: var(--red);
   color: var(--white);

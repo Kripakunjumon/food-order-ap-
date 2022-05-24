@@ -6,6 +6,7 @@ import { Food, Tag } from '../../shared/models';
 })
 export class FoodService {
   constructor() {}
+  
 
   getAll(): Food[] {
     return [

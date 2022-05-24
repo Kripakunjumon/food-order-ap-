@@ -17,6 +17,7 @@ export class CartService {
       this.changeQuantity(food.id, cartItem.quantity + 1);
       return;
     }
+    
     this.cart.items.push(new CartItem(food));
     this.cartCount.next(this.cart.items.length);
   }

@@ -12,9 +12,20 @@ import { TagsComponent } from './tags/tags.component';
 import { CartComponent } from './cart/cart.component';
 import { FoodComponent } from './food/food.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent, CartComponent, FoodComponent, NotFoundComponent],
+  declarations: [AppComponent, 
+    HeaderComponent,
+     HomeComponent,
+      SearchComponent,
+       TagsComponent, 
+       CartComponent,
+        FoodComponent,
+         NotFoundComponent,
+          LoginComponent,
+           SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,3 +36,4 @@ import { NotFoundComponent } from './not-found/not-found.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

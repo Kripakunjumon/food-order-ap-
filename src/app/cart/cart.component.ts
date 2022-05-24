@@ -7,6 +7,7 @@ import { CartItem, Cart } from '../shared/models';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
 })
+
 export class CartComponent implements OnInit {
   cart!: Cart;
 

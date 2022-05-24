@@ -11,8 +11,10 @@ declare const require: {
   context(path: string, deep?: boolean, filter?: RegExp): {
     <T>(id: string): T;
     keys(): string[];
+
   };
 };
+
 
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(

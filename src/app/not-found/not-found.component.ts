@@ -15,3 +15,4 @@ export class NotFoundComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+

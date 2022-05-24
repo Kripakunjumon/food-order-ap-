@@ -29,3 +29,4 @@ jobs:
 
       - name: Deploy Angular App to Surge
         run: surge ./dist/foodorderapp foodorderapp-amlakhani.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        

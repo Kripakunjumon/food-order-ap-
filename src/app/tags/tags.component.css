@@ -4,6 +4,7 @@ div {
   align-items: center;
 }
 
+
 div a {
   background-color: var(--light-gray);
   color: var(--gray);

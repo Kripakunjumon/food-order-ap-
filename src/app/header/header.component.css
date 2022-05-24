@@ -4,6 +4,7 @@ header {
   border-bottom: 1px solid var(--red);
 }
 
+
 .content {
   display: flex;
   align-items: center;

@@ -19,6 +19,7 @@ export class TagsComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+  
   ngOnInit(): void {
     if (!this.foodPageTags.length) {
       this.tags = this.foodService.getAllTag();
