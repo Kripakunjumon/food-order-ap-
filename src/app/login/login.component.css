@@ -1,1 +1,8 @@
+.login{
+    font-family: Arial, sans-serif;
+}
 
+.invalid-feedback
+{
+  margin-left: 25px;
+}
